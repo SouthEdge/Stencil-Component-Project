@@ -1,0 +1,32 @@
+<!doctype html><html dir="ltr" lang="en"><head> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0"> <title>Stencil Component Starter</title> <style>edge-progress-bar {
+        margin: 2rem;
+      }
+      .comp-container {
+        margin: 1rem;
+      }
+      .content {
+    display: flex;
+    margin: 40px;
+  }
+
+  .content edge-button {
+    margin-left: 10px;
+  }
+  body {
+    margin-bottom: 2rem;
+  }
+  .progressBar-comp {
+    margin-bottom: 2rem;
+  }</style> <script type="module" src="/build/edge-web-comp-lib.esm.js" data-stencil></script> <script nomodule="" src="/build/edge-web-comp-lib.js" data-stencil></script> </head> <body> <div class="container"> <h2>Button Component</h2> Colors : <div class="content"> <edge-button class="btn btn-default btn-wd" title="Default"></edge-button> <edge-button class="btn btn-primary btn-wd" title="Primary"></edge-button> <edge-button class="btn btn-success btn-wd" title="Success"></edge-button> <edge-button class="btn btn-warning btn-wd" title="Warning"></edge-button> <edge-button class="btn btn-danger btn-wd" title="Danger"></edge-button> <edge-button class="btn btn-info btn-wd" title="Info"></edge-button> </div> Size : <div class="content"> <edge-button class="btn btn-default btn-fill btn-lg" title="Large"></edge-button> <edge-button class="btn btn-default btn-fill" title="Default"></edge-button> <edge-button class="btn btn-default btn-fill btn-sm" title="Small"></edge-button> <edge-button class="btn btn-default btn-fill btn-xs" title="X-Small"></edge-button> </div> Styles : <div class="content"> <edge-button class="btn btn-default btn-wd" title="Default"></edge-button> <edge-button class="btn btn-fill btn-wd" title="Fill"></edge-button> <edge-button class="btn btn-fill btn-wd btn-round" title="Fill + Round"></edge-button> <edge-button class="btn btn-default btn-wd btn-round" title="Round"></edge-button> <edge-button class="btn btn-simple btn-wd btn-default" title="Simple"></edge-button> </div> Outline Buttons : <div class="content"> <edge-button class="btn btn-outline-default btn-wd" title="Default"></edge-button> <edge-button class="btn btn-outline-primary btn-wd" title="Primary"></edge-button> <edge-button class="btn btn-outline-success btn-wd" title="Success"></edge-button> <edge-button class="btn btn-outline-warning btn-wd" title="Warning"></edge-button> <edge-button class="btn btn-outline-danger btn-wd" title="Danger"></edge-button> <edge-button class="btn btn-outline-info btn-wd" title="Info"></edge-button> </div> </div> <div class="comp-container"> <h2>Card Component</h2> <edge-card firstname="Stencil" lastname="Js" avatar="https://mdbootstrap.com/img/Photos/Avatars/img%20%2831%29.jpg" description="'Don't call me a framework' JS"></edge-card><br> </div> <div class="progressBar-comp"> <h2>Progress Bar Component</h2> <edge-progress-bar value="0.3" label="30%"></edge-progress-bar> <edge-progress-bar color="success" value="0.4" dlabel="40%" class="determinate-progress progress-bar-success"></edge-progress-bar> <edge-progress-bar color="info" value="0.5" dlabel="50%" class="determinate-progress progress-bar-info"></edge-progress-bar> <edge-progress-bar color="warning" value="0.6" dlabel="60%" class="determinate-progress progress-bar-warning"></edge-progress-bar> <edge-progress-bar color="danger" value="0.7" dlabel="70%" class="determinate-progress progress-bar-danger"></edge-progress-bar> <edge-progress-bar class="indeterminate-progress"></edge-progress-bar> </div> <div> <h2>Alert Component</h2> <edge-alert headertitle="Info Notification Alert.." class="primary"></edge-alert> <edge-alert headertitle="Success record alert notification alert..." class="success"></edge-alert> <edge-alert headertitle="Danger record alert notification alert..." class="danger"></edge-alert> </div> <script>const elemen = document.querySelectorAll('edge-button');
+      elemen.forEach(element => {
+        element.addEventListener('name', data=>{
+        alert(data.detail);
+      })
+      });</script> <script>if ('serviceWorker' in navigator && location.protocol !== 'file:') {
+  // auto-unregister service worker during dev mode
+  navigator.serviceWorker.getRegistration().then(function(registration) {
+  if (registration) {
+    registration.unregister().then(function() { location.reload(true) });
+  }
+  });
+}</script></body></html>
